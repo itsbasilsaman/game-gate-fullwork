@@ -254,12 +254,6 @@ body {
 
 
 
-@media(max-width:991px){
-  .home {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
 
 
 
@@ -365,13 +359,20 @@ body {
   background-color: rgb(5, 7, 152);
 }
 
+
+
+
+
+
+
+
 .header-modal-section {
   display: grid;
   grid-template-columns: 1.2fr 1.6fr;
 }
 
-/* Profile */
 
+/* Profile */
 
 .profile-main {
   display: grid;
@@ -382,6 +383,35 @@ body {
  
     background-size: cover;
     border: 2px solid rgba(139, 139, 139, 0.138);
+}
+
+
+@media(max-width:991px){
+  .home {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-inputbox  {
+    padding-right: 0px;
+  }
+  
+.category-section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.category-slider {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+}
+
+
+@media(max-width:1119px){ 
+  .top-up-section {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 19px;
+  }
 }
 
 
@@ -427,24 +457,8 @@ body {
     padding-right: 190px;
   }
 }
-@media(max-width:1100px){
-  .header-inputbox {
-    padding-right: 170px;
-  }
-}
-@media(max-width:1088px){
-  .header-inputbox {
-    padding-right: 130px;
-  }
-}
-@media(max-width:1065px){
-  .header-inputbox {
-    padding-right: 100px;
-  }
-}
 @media(max-width:991px){
   .header-inputbox {
-     width: 100%;
-    
+     width: 247px;
   }
 }
