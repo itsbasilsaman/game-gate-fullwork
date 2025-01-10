@@ -61,7 +61,7 @@ export const Main: FC = memo(() => {
             className="text-[48px] w-[350px] lg:text-[54px] font-bold lg:w-[700px] leading-[52px] lg:leading-[58px] mb-[5px] lg:mb-[0px]"
             style={{ fontFamily: 'Unbounded' }}
           >
-            Your One-Stop Shop for Gaming Goodies!
+            Your One Stop Shop for Gaming Goodies!
           </h1>
           <p className="lg:w-[520px] w-[350px] lg:text-[18px]">
             Buy and sell gaming products securely—gift cards, game coins, accounts, and more. Trusted by millions of gamers worldwide.
