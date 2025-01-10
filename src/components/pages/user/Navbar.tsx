@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Flag from './Images/flag.png';
 import { IoMdClose } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 
 export const Navbar: React.FC = React.memo(() => {
@@ -142,7 +143,7 @@ export const Navbar: React.FC = React.memo(() => {
         <div className='flex justify-center items-center lg:gap-[20px] hidden lg:flex'>
           <button className='pl-[6px] pr-[16px] lg:h-[56px] country-button modal-country-button flex justify-center items-center gap-[10px] rounded-[1000px] lg:text-[19px]' onClick={toggleModal}><img src={Flag} alt="" className='w-[43px]' /> IN</button>
           <button className='lg:w-[228px] lg:h-[56px] country-button rounded-[1000px] lg:text-[19px] '>Become a Seller</button>
-          <button className='lg:w-[228px] lg:h-[56px] login-signup-button rounded-[1000px] lg:text-[19px]'>Login / Signup</button>
+          <Link to={'/user/login'}><button className='lg:w-[228px] lg:h-[56px] login-signup-button rounded-[1000px] lg:text-[19px]'>Login / Signup</button></Link>
         </div>
         <div
           className={`w-[27px] h-[27px] lg:hidden block flex justify-center items-center transition-all duration-300 ease-in-out `}
