@@ -12,6 +12,7 @@ import Category from "./components/pages/category";
 import About from "./components/pages/about";
 import { Toaster } from "react-hot-toast";
 import ChatComponent from "./components/pages/user/chat";
+import ScrollToTop from "./ScrollToTop";
  
 
 export const App: React.FC = React.memo(() => {
@@ -19,6 +20,7 @@ export const App: React.FC = React.memo(() => {
   return (
     <Fragment>
       <Toaster position="top-center" />
+      <ScrollToTop/>
       <Routes>
       <Route path='/' element={<WelcomePage/>} />
         <Route path="/user/login" element={<UserLogin />} />
