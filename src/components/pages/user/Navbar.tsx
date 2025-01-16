@@ -94,6 +94,10 @@ export const Navbar: React.FC = React.memo(() => {
               <MdOutlineKeyboardArrowDown className='text-[24px] mx-[5px] cursor-pointer' onClick={toggleDropdown} />
             </div>
 
+
+
+            
+
             {dropdownOpen && (
               <div className="absolute lg:top-[60px] top-[77px] left-0 right-0 header-dropdown shadow-lg rounded-lg p-4 z-10">
                 {showCategories ? (
