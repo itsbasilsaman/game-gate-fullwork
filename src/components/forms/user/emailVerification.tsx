@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "react-phone-number-input/style.css"; // This can be removed as it's no longer needed
-// import BgImg from "../../../assets/images/logo.png";
+import BgImg from "../../../assets/Images/logo.png";
 
 const EmailVerification: React.FC = () => {
   const [otp, setOtp] = useState<string[]>(["", "", "", "", "", ""]);
@@ -8,10 +7,10 @@ const EmailVerification: React.FC = () => {
 
   // Handle OTP input change
   const handleInputChange = (value: string, index: number): void => {
-    if (isNaN(Number(value))) return; // Ignore non-numeric input
+    if (!/^\d*$/.test(value)) return; // Allow only numeric input
+
     const newOtp = [...otp];
-    newOtp[index] = value;
-    
+    newOtp[index] = value.slice(0, 1); // Ensure single-digit input
     setOtp(newOtp);
 
     // Automatically focus on the next input field
@@ -19,6 +18,29 @@ const EmailVerification: React.FC = () => {
       const nextInput = document.getElementById(`otp-input-${index + 1}`) as HTMLInputElement;
       nextInput?.focus();
     }
+  };
+
+  // Handle backspace key
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number): void => {
+    if (e.key === "Backspace" && !otp[index] && index > 0) {
+      const prevInput = document.getElementById(`otp-input-${index - 1}`) as HTMLInputElement;
+      prevInput?.focus();
+    }
+  };
+
+  // Handle paste event
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>): void => {
+    e.preventDefault();
+    const pasteData = e.clipboardData.getData("text").slice(0, otp.length);
+    if (!/^\d+$/.test(pasteData)) return; // Allow only numeric input
+
+    const newOtp = pasteData.split("").concat(otp.slice(pasteData.length));
+    setOtp(newOtp.slice(0, otp.length));
+
+    // Automatically focus on the last filled input
+    const lastFilledIndex = pasteData.length - 1;
+    const nextInput = document.getElementById(`otp-input-${lastFilledIndex}`) as HTMLInputElement;
+    nextInput?.focus();
   };
 
   // Handle timer countdown
@@ -51,9 +73,9 @@ const EmailVerification: React.FC = () => {
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 adminlogin-background">
         <div className="background-one relative inset-0 flex justify-center items-start pt-[60px]">
-          {/* <img src={BgImg} alt="" className="w-[110px]" /> */}
+          <img src={BgImg} alt="" className="w-[110px]" />
         </div>
-        <div className="background-two"></div>
+        <div className="background-two bg-white"></div>
       </div>
 
       {/* Form Container */}
@@ -78,12 +100,21 @@ const EmailVerification: React.FC = () => {
                   maxLength={1}
                   value={digit}
                   onChange={(e) => handleInputChange(e.target.value, index)}
+                  onKeyDown={(e) => handleKeyDown(e, index)}
+                  onPaste={handlePaste}
                   className="w-10 h-10 text-center border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               ))}
             </div>
             <p className="mb-6 text-center text-sm text-gray-500">
-              Request in {timer > 0 ? `${timer} sec` : <button onClick={handleResend} className="text-blue-600 hover:underline">Resend</button>}
+              Request in{" "}
+              {timer > 0 ? (
+                `${timer} sec`
+              ) : (
+                <button onClick={handleResend} className="text-blue-600 hover:underline">
+                  Resend
+                </button>
+              )}
             </p>
             <div className="flex justify-between">
               <button

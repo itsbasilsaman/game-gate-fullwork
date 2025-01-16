@@ -5,6 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Logo from '../../../assets/gaminggate-logo.png'
 
 
 
@@ -12,7 +13,10 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className='w-full lg:h-[260px] h-[500px] footer text-white md:px-[80px] px-[20px] pt-[20px] lg:pt-[0px] mt-[200px]'>
       <div className='flex justify-between items-center footer-section flex-col lg:flex-row'>
-        <h1 className='text-[20px] footer-logo-head font-semibold py-[20px] lg:py-[0px]'>GAME GATE</h1>
+        <div className='flex justify-center items-center'>
+          <img src={Logo}  className='w-[60px]'/>
+          <h1 className='text-[20px] footer-logo-head font-semibold py-[20px] lg:py-[0px]'>GATE</h1>
+        </div>
         <div className='hidden lg:flex justify-center lg:gap-[20px] lg:text-[20px]'>
           <FaYoutube />
           <FaFacebookF />

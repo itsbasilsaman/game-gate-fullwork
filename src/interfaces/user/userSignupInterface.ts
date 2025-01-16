@@ -1,9 +1,11 @@
 export interface UserSignup {
-   
-    name:string
+    firstName:string
+    lastName:string
+    fcmToken:string
+    phone:string
+    country:string
+    userName:string
     email:string
-    password:string
-    confirmPassword:string
-
+    gender:string
     
 }

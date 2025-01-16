@@ -9,6 +9,7 @@ import Five from '../../../assets/MainCardImages/tabular-coin1.png';
 import Six from '../../../assets/MainCardImages/item.png';
 import Seven from '../../../assets/MainCardImages/heart2222.png';
 import Eight from '../../../assets/Images/eight.png';
+import { Link } from 'react-router-dom';
 
 interface BoxItem {
   img: string;
@@ -67,12 +68,14 @@ export const Main: FC = memo(() => {
       </main>
       <div className='   dlg:h-[168px] lg:h-[155px] game-slider-home rounded-[28px]  md:mx-[80px] mx-[20px] ' >
       {boxItems.map((item, index) => (
-        <div className="box-item flex flex-col justify-center items-center" key={index}>
-         <div className='flex flex-col justify-center items-center   py-[8px] px-[6px] game-slider-box cursor-pointer rounded-[8px]'>
-            <img src={item.img} alt={item.name} className="box-image w-[110px] " style={{borderRadius:`${item.rounded}`}} />
-            <p className="box-name text-white flex-1 text-center dlg:text-[16px] lg:text-[14px]">{item.name}</p>
-         </div>
-        </div>
+       <Link to={'/about'}>
+          <div className="box-item flex flex-col justify-center items-center" key={index}>
+           <div className='flex flex-col justify-center items-center   py-[8px] px-[6px] game-slider-box cursor-pointer rounded-[8px]'>
+              <img src={item.img} alt={item.name} className="box-image w-[110px] " style={{borderRadius:`${item.rounded}`}} />
+              <p className="box-name text-white flex-1 text-center dlg:text-[16px] lg:text-[14px]">{item.name}</p>
+           </div>
+          </div>
+       </Link>
       ))}
 
       </div>

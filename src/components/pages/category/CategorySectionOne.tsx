@@ -1,14 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AlarmOutline from '../../../assets/Images/alarm-outline.png';
 import CardOutline from '../../../assets/Images/card-outline.png';
 import Shape from '../../../assets/Images/Shape.png';
 import Vector from '../../../assets/Images/Vector.png';
 import Plus from '../../../assets/Images/Plus.png';
 import Minus from '../../../assets/Images/Minus.png';
+import Swal from 'sweetalert2';
 
 
 
 const CategorySectionOne: React.FC  = React.memo(() => {
+
+  const [count, setCount] = useState(0);  
+
+  const increment = () => setCount((prev) => prev + 1);
+  const decrement = () => setCount((prev) => (prev > 0 ? prev - 1 : 0));
+
+
+  const hanglebrandTopup = ()=>{
+
+    Swal.fire({
+      icon: "warning",
+      title: false,
+      text: "Please integrate the payment gateway",
+      timer: 3000,
+      toast: true,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      background: "#fff4e5", // Light orange background for warning
+      color: "#856404", // Darker orange text color
+      iconColor: "#fd7e14", // Custom color for the warning icon
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer); // Pause timer on hover
+        toast.addEventListener("mouseleave", Swal.resumeTimer); // Resume timer on mouse leave
+      },
+      showClass: {
+        popup: "animate_animated animate_fadeInDown", // Animation when the toast appears
+      },
+      hideClass: {
+        popup: "animate_animated animate_fadeOutUp", // Animation when the toast disappears
+      },
+    });
+  }
+
   return (
     <main className='w-full h-auto pb-[40px]   text-white'> 
       <p className='pt-[120px] md:px-[80px] px-[20px]'>Home / Games / Clash of Clans / Gold Pass </p>
@@ -66,25 +100,25 @@ const CategorySectionOne: React.FC  = React.memo(() => {
                <div className='line lg:py-[12px]  '></div>
                <h1 className='lg:text-[18px] lg:py-[20px] font-semibold'>Total Amount:</h1>
                <h1 style={{color:'rgba(0, 255, 121, 1)'}} className='lg:text-[25px] font-bold'>111.23 USD</h1>
-               <div className='w-full lg:h-[56px] counter rounded-[1000px] lg:mt-[23px] flex justify-between items-center lg:px-[8px]'>
-                <img src={Plus} />
-                <p className='text-[19px] font-semibold'>2</p>
-                <img src={Minus} />
-               </div>
-               <button className='w-full lg:h-[56px] rounded-[1000px] lg:mt-[18px] text-[18px] font-medium buy-now-button'   >Buy now</button>
+               <div className="w-full h-[56px] counter rounded-[1000px] lg:mt-[23px] flex justify-between items-center px-[8px]">
+      <img src={Plus} alt="Increase" onClick={increment} className="cursor-pointer" />
+      <p className="text-[19px] font-semibold">{count}</p>
+      <img src={Minus} alt="Decrease" onClick={decrement} className="cursor-pointer" />
+    </div>
+               <button onClick={hanglebrandTopup} className='w-full lg:h-[56px] rounded-[1000px] lg:mt-[18px] text-[18px] font-medium buy-now-button'   >Buy now</button>
           </div>
       </section>
       <div className='lg:hidden block md:mx-[80px] mx-[20px] px-[10px] py-[22px] flex justify-center items-start flex-col gap-[12px] rounded-[16px]' style={{border: '2px solid rgba(255, 255, 255, 0.214)'}}>
                 <h1 className='text-[18px] lg:py-[20px] font-semibold'>Total Amount:</h1>
                <h1 style={{color:'rgba(0, 255, 121, 1)' , fontFamily:'Unbounded'}} className='lg:text-[25px] text-[22px] font-bold'>111.23 USD</h1>
-               <div className='w-full h-[56px] counter rounded-[1000px] lg:mt-[23px] flex justify-between items-center px-[8px]'>
-                <img src={Plus} />
-                <p className='text-[19px] font-semibold'>2</p>
-                <img src={Minus} />
-               </div>
+               <div className="w-full h-[56px] counter rounded-[1000px] lg:mt-[23px] flex justify-between items-center px-[8px]">
+      <img src={Plus} alt="Increase" onClick={increment} className="cursor-pointer" />
+      <p className="text-[19px] font-semibold">{count}</p>
+      <img src={Minus} alt="Decrease" onClick={decrement} className="cursor-pointer" />
+    </div>
       </div>
      <div className='block lg:hidden py-[19px] px-[18px] fixed bottom-[0px] left-[0px] right-[0px]' style={{backgroundColor:'#271D8E'}}>
-       <button className='w-full lg:h-[56px] py-[12px] lg:py-[0px] rounded-[1000px] lg:mt-[18px] text-[18px] font-medium buy-now-button'  >Buy now</button>
+       <button onClick={hanglebrandTopup} className='w-full lg:h-[56px] py-[12px] lg:py-[0px] rounded-[1000px] lg:mt-[18px] text-[18px] font-medium buy-now-button'  >Buy now</button>
      </div>
     </main>
   );

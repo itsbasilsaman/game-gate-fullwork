@@ -79,19 +79,21 @@ body {
   padding: 26px 20px;
 }
 /* Main Input Styles */
-input[type="text"] {
+/* input[type="text"] {
  
   padding: 10px;
   border-radius: 50px;
   width: 100%;
-}
+} */
 
 /* Dropdown Styles */
 button {
   font-size: 14px;
   font-weight: 500;
 }
-
+.background-two {
+  background-color: white;
+}
 /* Popular Searches and Categories */
 .bg-white {
   background-color: #fff;
@@ -299,26 +301,15 @@ button {
   grid-template-columns: 1fr 1.6fr;
 }
 
+/* Chat Component */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.chat-input-field {
+  border: 2px solid #161E71;
+}
+.chat-input-field:focus {
+  border: 2px solid #181b37;
+}
+ 
 
 @media(max-width:745px){
   .footer-logo-head {
@@ -439,6 +430,51 @@ button {
  
     background-size: cover;
     border: 2px solid rgba(139, 139, 139, 0.138);
+}
+
+.admin-login-box {
+  box-shadow:0px 0px 1px rgba(0, 0, 0, 0.227);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 12px;
+}
+.adminlogin-background {
+  display: grid;
+  grid-template-rows: 1.1fr 2fr;
+}
+.background-one {
+  background: url('../src/assets/images/footerbg.png');
+  background-size: cover;
+}
+.loading {
+  background: url('../src/assets/images/footerbg.png');
+  background-size: cover;
+  background-position: top;
+}
+.line {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  width: 100%;
+  height: 1px;
+}
+.error-box {
+  background-color: rgba(255, 255, 255, 0.368);
+  border: 1px solid rgba(255, 255, 255, 0.671) ;
+}
+
+
+/* Seller  */
+
+.seller-home {
+  background: linear-gradient(to top right, #04061a, #212987);
+  border-bottom-right-radius: 820px;
+}
+.primary-color {
+  color: #101441;
+}
+.primary-border {
+  border: 1px solid rgba(224, 224, 224, 0.671) ;
+}
+.background-gradient {
+  background: linear-gradient(to top right, #04061a, #212987);
 }
 
  

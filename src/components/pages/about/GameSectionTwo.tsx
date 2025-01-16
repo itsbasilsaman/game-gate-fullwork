@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IoSearchSharp } from "react-icons/io5";
 import Icon from '../../../assets/Images/chevron-down.png';
 import { CiHeart } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const GameSectionTwo: React.FC = React.memo(() => {
   const [selectedOption, setSelectedOption] = useState<string>("");
@@ -58,98 +59,100 @@ const GameSectionTwo: React.FC = React.memo(() => {
          </div>
         </div>
     </div>
-    <div className='top-up-section lg:gap-[19px] lg:pt-[25px]  pt-[5px] pb-[25px]'  >
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-       <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
-         <div className='flex justify-between'>
-           <h1 className='text-[20px] font-medium'>Gold Pass</h1>
-           <CiHeart className='text-[44px]' />
-         </div>
-         <div className='flex justify-between items-center'>
-           <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
-           <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
-         </div>
-       </section>
-    </div>
+    <Link to={'/user/Category'}>
+      <div className='top-up-section lg:gap-[19px] lg:pt-[25px]  pt-[5px] pb-[25px]'  >
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+         <section className='lg:h-[125px] rounded-[16px]  top-up-box p-[19px] flex flex-col justify-between'>
+           <div className='flex justify-between'>
+             <h1 className='text-[20px] font-medium'>Gold Pass</h1>
+             <CiHeart className='text-[44px]' />
+           </div>
+           <div className='flex justify-between items-center'>
+             <p className='game-offer-button py-[6px] px-[8px] rounded-[8px]'>12 Offer</p>
+             <p className='font-semibold text-[22px]' style={{color:'rgba(0, 255, 121, 1)'}}>111.23 USD</p>
+           </div>
+         </section>
+      </div>
+    </Link>
  </main>
   );
 });
