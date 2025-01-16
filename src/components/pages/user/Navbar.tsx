@@ -82,7 +82,7 @@ export const Navbar: React.FC = React.memo(() => {
   return (
     <>
       <div className='flex justify-center fixed items-center text-white md:px-[90px] px-[30px] h-[90px] lg:gap-[20px] gap-[18px] header fixed top-0 left-0 w-full ' style={{ background, zIndex: '10' }}>
-        <div className='text-[19px] font-semibold flex justify-center items-center'>  <img src={Logo} alt="" className='w-[60px] hidden lg:block' /><span className='text-[22px] l'>GATE</span></div>
+        <div className='text-[19px] font-semibold flex justify-center items-center'>  <img src={Logo} alt="" className='w-[60px] hidden lg:block' /><span className='text-[22px] l'>GATE  </span></div>
         <div className="lg:relative max-w-[600px] mx-auto">
           <div ref={searchRef} className="lg:relative max-w-[600px] mx-auto">
             <div className="flex items-center rounded-full header-input-section shadow-md p-2">
